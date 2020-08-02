@@ -1,14 +1,22 @@
-import React from "react";
-import { HashRouter as Router, Route } from "react-router-dom";
-import Home from "./routes/Home";
-import Detail from "./routes/Detail";
+import React, { Component } from 'react';
+import './App.css';
+
+class AddNumberRoot extends Component {
+  render() {
+    return (
+      <div>
+        <h1>Add Numnber Root</h1>
+      </div>
+    );
+  }
+}
 
 function App() {
   return (
-    <Router>
-      <Route path="/" exact component={Home}></Route>
-      <Route path="/:id" component={Detail}></Route>
-    </Router>
+    <div className="App">
+      <h1>Root</h1>
+      <AddNumberRoot />
+    </div>
   );
 }
 
