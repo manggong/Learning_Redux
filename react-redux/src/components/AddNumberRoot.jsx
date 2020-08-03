@@ -6,7 +6,11 @@ class AddNumberRoot extends Component {
     return (
       <div>
         <h1>Add Numnber Root</h1>
-        <AddNumber />
+        <AddNumber
+          onClick={function(size) {
+            this.props.onClick(size);
+          }.bind(this)}
+        />
       </div>
     );
   }
