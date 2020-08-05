@@ -1,0 +1,10 @@
+div {
+  border: 5px solid #764abc;
+  margin: 10px;
+  color: pink;
+  padding: 5px;
+}
+
+#stylebot {
+  border: 0px;
+}
