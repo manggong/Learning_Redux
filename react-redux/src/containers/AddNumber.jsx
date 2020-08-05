@@ -8,7 +8,7 @@ export default class extends Component {
       <AddNumber
         onClick={function(size) {
           store.dispatch({ type: 'INCREAMENT', size });
-        }.bind(this)}
+        }}
       ></AddNumber>
     );
   }
