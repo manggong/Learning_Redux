@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+    <style>
+      #container {
+        padding: 50px;
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script type="text/babel">
+      class Square extends React.Component {
+        render() {
+          const squareStyle = {
+            height: 150,
+            backgroundColor: '#FF6663'
+          };
+          return <div style={squareStyle}></div>;
+        }
+      }
+      class Label extends React.Component {
+        render() {
+          const labelStyle = {
+            fontFamily: 'sans-serif',
+            fontWeight: 'bold',
+            padding: 13,
+            margin: 0
+          };
+          return <p style={labelStyle}>#ff6663</p>;
+        }
+      }
+      class Card extends React.Component {
+        render() {
+          const cardStyle = {
+            height: 200,
+            width: 150,
+            padding: 0,
+            backgroundColor: '#fff',
+            boxShadow: '0px 0px 5px #666'
+          };
+          return (
+            <div style={cardStyle}>
+              <Square />
+              <Label />
+            </div>
+          );
+        }
+      }
+      ReactDOM.render(
+        <div>
+          <Card />
+        </div>,
+        document.querySelector('#container')
+      );
+    </script>
+  </body>
+</html>
